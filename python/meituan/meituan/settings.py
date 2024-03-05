@@ -17,7 +17,7 @@ NEWSPIDER_MODULE = "meituan.spiders"
 #USER_AGENT = "meituan (+http://www.yourdomain.com)"
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -37,10 +37,13 @@ ROBOTSTXT_OBEY = True
 #TELNETCONSOLE_ENABLED = False
 
 # Override the default request headers:
-#DEFAULT_REQUEST_HEADERS = {
+DEFAULT_REQUEST_HEADERS = {
 #    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
 #    "Accept-Language": "en",
-#}
+    'Cookie': '_lxsdk_cuid=18a8d26aab5c8-05eb1d1a0c5011-19525634-13c680-18a8d26aab5c6; WEBDFPID=653629w0044851z107vuy568v7431w7y81z1w73y3v897958u0yy856y-2009945240344-1694585237637IUEEIMG75613c134b6a252faa6802015be905516892; _hc.v=be61828e-7424-ecd6-0600-adbd08fdd53a.1694585248; _gid=GA1.2.315039336.1709511959; zgwww=ec96e200-d9c5-11ee-b1e2-554576b05e95; uuid=737AD5AA843EC6B2CF5BE92E56A3CF1636C616692CDDB0482F15276FE8D97C62; iuuid=737AD5AA843EC6B2CF5BE92E56A3CF1636C616692CDDB0482F15276FE8D97C62; _lxsdk=737AD5AA843EC6B2CF5BE92E56A3CF1636C616692CDDB0482F15276FE8D97C62; zg.userid.untrusted=465229356; token2=AgHtI4uDBpDwo45C9HKX2VwHrafhKdLxgtTHq7uvDbAA8nhLKhicz8EShLxHZJ2PuGxz9P3ghsrVdAAAAABgHgAAkT4FsCnXJpfS1ZUha24p4Odi3_47frM_r8spA2mR3gcWwyE2cgxx8frQoqsdGWZ_; userid=2583015098; _ga=GA1.2.2044757989.1694585236; _lxsdk_s=18e094cc37d-28e-811-732%7C%7C65; XSRF-TOKEN=6J1cPwUh-tJr9TiF1qC_019SxF9g3V5TE8aQ; _ga_14F924BYNN=GS1.1.1709553024.3.1.1709553637.60.0.0',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3928.4 Safari/537.36',
+
+}
 
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
