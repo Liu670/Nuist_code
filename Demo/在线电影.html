@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Player</title>
+</head>
+
+<body>
+    <h1>Movie List</h1>
+    <ul id="movieList"></ul>
+    <video id="videoPlayer" controls width="600">
+        Your browser does not support the video tag.
+    </video>
+
+    <script>
+        const movieList = document.getElementById('movieList');
+        const videoPlayer = document.getElementById('videoPlayer');
+        const moviesFolder = 'movies/';
+        const movieFiles = ['movie1.mp4', 'movie2.mp4', 'movie3.mp4']; // 假设这是您的电影文件列表
+
+        movieFiles.forEach(movie => {
+            const listItem = document.createElement('li');
+            const link = document.createElement('a');
+            link.href = moviesFolder + movie;
+            link.textContent = movie;
+            link.onclick = function () {
+                playMovie(moviesFolder + movie);
+            };
+            listItem.appendChild(link);
+            movieList.appendChild(listItem);
+        });
+
+        function playMovie(moviePath) {
+            videoPlayer.src = moviePath;
+            videoPlayer.play();
+        }
+    </script>
+</body>
+
+</html>
